@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 'PORT:80'
+    env_file: .env
+    depends_on:
+      - db
+
+  db:
+    image: mysql:latest
+    ports:
+      - 'PORT:3306'
+    restart: always
+    env_file: .env
