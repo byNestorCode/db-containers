@@ -1,4 +1,4 @@
-# 🚢 DB-Conteiners
+# 🚢 DB-Containers
 
 a repository to help you in the creation of a database server with an administrator through phpmyadmin. In the future this repo will manage some types of db.
 
