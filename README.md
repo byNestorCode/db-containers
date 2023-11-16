@@ -57,5 +57,5 @@ docker-compose up
 if you have problems connecting to your bbdd, do not forget to use the ip of the bridge network of your docker service. The IP of your service is similar to the following:
 
 ```bash
-172.23.64.1
+172.xx.xx.1
 ```
