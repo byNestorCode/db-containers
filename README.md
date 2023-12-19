@@ -1,6 +1,6 @@
 # 🚢 DB-Containers
 
-a repository to help you in the creation of a database server with an administrator through phpmyadmin. In the future this repo will manage some types of db.
+A repository to help you in the creation of a database server with an administrator through phpmyadmin. In the future this repo will manage some types of db.
 
 # Welcome 🚀
 First of all, welcome, if you are here it's because I'm probably the one who is no longer there and you need this documentation to know how to maintain, modify and update the project. I want you to know that you can count on my total support.
@@ -29,9 +29,10 @@ For the system to compile successfully we will need to configure the environment
 3. 🌀 Add the next variables:
     - PMA_HOST=
     - UPLOAD_LIMIT=
-    - MYSQL_USER=
-    - MYSQL_PASSWORD=
+    - *MYSQL_USER=
+    - *MYSQL_PASSWORD=
     - MYSQL_ROOT_PASSWORD=
+    *not required
 
 # ❓❓ WTF is that?
 
@@ -54,7 +55,7 @@ docker-compose up
 
 # ❗❗ IMPORTANT
 
-if you have problems connecting to your bbdd, do not forget to use the ip of the bridge network of your docker service. The IP of your service is similar to the following:
+If you have problems connecting to your bbdd, do not forget to use the ip of the bridge network of your docker service. The IP of your service is similar to the following:
 
 ```bash
 172.xx.xx.1
