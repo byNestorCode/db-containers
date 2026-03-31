@@ -14,3 +14,8 @@ services:
       - '${MYSQL_PORT}:3306'
     restart: always
     env_file: .env
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
