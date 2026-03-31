@@ -32,7 +32,8 @@ For the system to compile successfully we will need to configure the environment
     - *MYSQL_USER=
     - *MYSQL_PASSWORD=
     - MYSQL_ROOT_PASSWORD=
-    *not required
+    - PHPMYADMIN_PORT=8010
+    - MYSQL_PORT=8009
 
 # ❓❓ WTF is that?
 
@@ -42,6 +43,8 @@ Let's see the definitions:
 - ***UPLOAD_LIMIT***: if set, this option will override the default value for apache and php-fpm (format as (0-9+)(K,M,G) default value is 2048K, this will change upload_max_filesize and post_max_size values).
 - ***MYSQL_USER*** and ***MYSQL_PASSWORD***: These variables are optional, used in conjunction to create a new user and to set that user's password. This user will be granted superuser permissions (see above) for the database specified by the MYSQL_DATABASE variable. Both variables are required for a user to be created. Do note that there is no need to use this mechanism to create the root superuser, that user gets created by default with the password specified by the MYSQL_ROOT_PASSWORD variable.
 - ***MYSQL_ROOT_PASSWORD***: (from user root) This variable is mandatory and specifies the password that will be set for the MySQL root superuser account. In the above example, it was set to my-secret-pw.
+- ***PHPMYADMIN_PORT***: defines the external port on the host machine that will be mapped to the phpMyAdmin container port **80**. This allows access to phpMyAdmin from a web browser using `http://localhost:PHPMYADMIN_PORT`.
+- ***MYSQL_PORT***: defines the external port on the host machine that will be mapped to the MySQL container port **3306**. This allows external tools or applications to connect to the MySQL database using `localhost:MYSQL_PORT`.
 
 # 🐳 Once Docker is installed and 📄.env has been created:
 
